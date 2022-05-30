@@ -13,6 +13,9 @@
 		627FF8CA282DC87C00CB273B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627FF8C8282DC87C00CB273B /* Main.storyboard */; };
 		627FF8CC282DC87D00CB273B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 627FF8CB282DC87D00CB273B /* Assets.xcassets */; };
 		627FF8CF282DC87D00CB273B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627FF8CD282DC87D00CB273B /* LaunchScreen.storyboard */; };
+		6296233B284492B300F85ECA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6296233A284492B300F85ECA /* HomeViewController.swift */; };
+		6296233E28452A3D00F85ECA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6296233D28452A3D00F85ECA /* Alamofire */; };
+		6296234228453A7D00F85ECA /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 6296234128453A7C00F85ECA /* assets */; };
 		F222F44D28330B870004717F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222F44C28330B870004717F /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,8 @@
 		627FF8CB282DC87D00CB273B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		627FF8CE282DC87D00CB273B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		627FF8D0282DC87D00CB273B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6296233A284492B300F85ECA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6296234128453A7C00F85ECA /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		F222F44C28330B870004717F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6296233E28452A3D00F85ECA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,7 @@
 		627FF8B6282DC87C00CB273B = {
 			isa = PBXGroup;
 			children = (
+				6296234128453A7C00F85ECA /* assets */,
 				627FF8C1282DC87C00CB273B /* ExamenIOS */,
 				627FF8C0282DC87C00CB273B /* Products */,
 			);
@@ -66,6 +73,7 @@
 				627FF8CD282DC87D00CB273B /* LaunchScreen.storyboard */,
 				627FF8D0282DC87D00CB273B /* Info.plist */,
 				F222F44C28330B870004717F /* SignUpViewController.swift */,
+				6296233A284492B300F85ECA /* HomeViewController.swift */,
 			);
 			path = ExamenIOS;
 			sourceTree = "<group>";
@@ -86,6 +94,9 @@
 			dependencies = (
 			);
 			name = ExamenIOS;
+			packageProductDependencies = (
+				6296233D28452A3D00F85ECA /* Alamofire */,
+			);
 			productName = ExamenIOS;
 			productReference = 627FF8BF282DC87C00CB273B /* ExamenIOS.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 627FF8B6282DC87C00CB273B;
+			packageReferences = (
+				6296233C28452A3D00F85ECA /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 627FF8C0282DC87C00CB273B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				627FF8CF282DC87D00CB273B /* LaunchScreen.storyboard in Resources */,
+				6296234228453A7D00F85ECA /* assets in Resources */,
 				627FF8CC282DC87D00CB273B /* Assets.xcassets in Resources */,
 				627FF8CA282DC87C00CB273B /* Main.storyboard in Resources */,
 			);
@@ -141,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6296233B284492B300F85ECA /* HomeViewController.swift in Sources */,
 				627FF8C7282DC87C00CB273B /* ViewController.swift in Sources */,
 				627FF8C3282DC87C00CB273B /* AppDelegate.swift in Sources */,
 				F222F44D28330B870004717F /* SignUpViewController.swift in Sources */,
@@ -362,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6296233C28452A3D00F85ECA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6296233D28452A3D00F85ECA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6296233C28452A3D00F85ECA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 627FF8B7282DC87C00CB273B /* Project object */;
 }
