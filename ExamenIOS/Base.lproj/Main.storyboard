@@ -33,7 +33,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YOz-yu-366">
-                                <rect key="frame" x="49" y="285" width="317" height="34"/>
+                                <rect key="frame" x="49" y="301" width="317" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -48,7 +48,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Iniciar Sesión"/>
                                 <connections>
                                     <action selector="onLoginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1fm-84-MhD"/>
-                                    <segue destination="IvQ-oK-Tdb" kind="showDetail" id="Khc-Cl-TSa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOj-8D-kyf">
@@ -63,6 +62,20 @@
                                     <segue destination="Uvh-59-bjW" kind="show" id="Vrk-Vg-uCn"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Este Campo es Requerido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c30-rn-Wcw">
+                                <rect key="frame" x="49" y="263" width="156" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Este Campo es Requerido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvH-Sd-rNf">
+                                <rect key="frame" x="49" y="343" width="156" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -70,8 +83,10 @@
                     <navigationItem key="navigationItem" id="zZS-Pf-AjO"/>
                     <connections>
                         <outlet property="loginButton" destination="gtN-xj-QLD" id="6KE-Vw-ujQ"/>
+                        <outlet property="passwordErrorTxt" destination="pvH-Sd-rNf" id="9eG-Dn-BbH"/>
                         <outlet property="passwordTf" destination="YOz-yu-366" id="z33-mZ-Ptf"/>
                         <outlet property="signUpButton" destination="AOj-8D-kyf" id="jDJ-yg-35c"/>
+                        <outlet property="usernameErrorTxt" destination="c30-rn-Wcw" id="YyS-HH-1bc"/>
                         <outlet property="usernameTf" destination="EZz-D8-XMS" id="2v1-wI-QRS"/>
                     </connections>
                 </viewController>
@@ -84,7 +99,7 @@
             <objects>
                 <viewController title="Pedido" id="Sh1-DU-ybF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T1A-WX-zla">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hola, este es el Pedido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNQ-BK-hwV">
@@ -109,7 +124,7 @@
             <objects>
                 <viewController title="Carrito" id="41s-W4-apx" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Skt-wb-AMB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sl7-pc-MYh">
@@ -280,7 +295,7 @@
             <objects>
                 <viewController title="Home" id="yUh-cS-QPa" customClass="HomeViewController" customModule="ExamenIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qHJ-a0-Ryw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HLf-ct-VCK">
@@ -619,10 +634,10 @@
             </objects>
             <point key="canvasLocation" x="3647.826086956522" y="-362.27678571428572"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--tabBar-->
         <scene sceneID="5nr-az-5g7">
             <objects>
-                <tabBarController id="IvQ-oK-Tdb" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" title="tabBar" id="IvQ-oK-Tdb" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="tBF-OK-0sL"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sRh-Ck-8Wh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

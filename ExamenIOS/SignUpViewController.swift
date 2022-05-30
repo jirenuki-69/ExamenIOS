@@ -9,6 +9,10 @@ import UIKit
 import Foundation
 import Alamofire
 
+struct ErrorMessage: Decodable {
+    let message: String
+}
+
 class SignUpViewController: UIViewController {
     
     @IBOutlet weak var usernameTf: UITextField!
@@ -19,6 +23,17 @@ class SignUpViewController: UIViewController {
     
     var username: String = ""
     var password: String = ""
+    
+    func alert(title: String, message: String) {
+        let dialogMessage = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "OK", style: .default)
+        dialogMessage.addAction(ok)
+        
+        DispatchQueue.main.async() {
+            self.present(dialogMessage, animated: true, completion: nil)
+        }
+    }
     
     func register(username: String, password: String) {
         
@@ -37,18 +52,28 @@ class SignUpViewController: UIViewController {
             
             
             if let error = error {
-                print("Error: \(error)")
+                self.alert(title: "Error", message: "Ha ocurrido un error, favor de intentar más tarde.")
+                
                 return
             }
             
             
             if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                print("Response:\n \(dataString)")
+                let data = Data(dataString.utf8)
                 
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "home") as! HomeViewController
-                self.present(newViewController, animated:true, completion:nil)
-                
+                do {
+                    // make sure this JSON is in the format we expect
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                        // try to read out a string array
+                        if (json["message"] == nil) {
+                            self.alert(title: "Usuario Creado", message: "El usuario ha sido registrado con éxito.")                        } else {
+                                self.alert(title: "Error", message: json["message"] as! String)
+                            }
+                    }
+                } catch let error as NSError {
+                    print("Failed to load: \(error.localizedDescription)")
+                }
+                // self.alert(title: "Usuario Creado", message: "El usuario ha sido registrado con éxito.")
             }
         }
         
