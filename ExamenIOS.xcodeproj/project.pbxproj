@@ -17,6 +17,10 @@
 		6296233E28452A3D00F85ECA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6296233D28452A3D00F85ECA /* Alamofire */; };
 		6296234228453A7D00F85ECA /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 6296234128453A7C00F85ECA /* assets */; };
 		F222F44D28330B870004717F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222F44C28330B870004717F /* SignUpViewController.swift */; };
+		F2830588284EB66C007EA6CF /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2830587284EB66C007EA6CF /* Usuario.swift */; };
+		F283058A284EB6C6007EA6CF /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2830589284EB6C6007EA6CF /* Categoria.swift */; };
+		F283058C284EB6DF007EA6CF /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283058B284EB6DF007EA6CF /* Producto.swift */; };
+		F283058E284ECA43007EA6CF /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283058D284ECA43007EA6CF /* ProductsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		6296233A284492B300F85ECA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6296234128453A7C00F85ECA /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		F222F44C28330B870004717F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F2830587284EB66C007EA6CF /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		F2830589284EB6C6007EA6CF /* Categoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
+		F283058B284EB6DF007EA6CF /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
+		F283058D284ECA43007EA6CF /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,10 @@
 				627FF8D0282DC87D00CB273B /* Info.plist */,
 				F222F44C28330B870004717F /* SignUpViewController.swift */,
 				6296233A284492B300F85ECA /* HomeViewController.swift */,
+				F2830587284EB66C007EA6CF /* Usuario.swift */,
+				F2830589284EB6C6007EA6CF /* Categoria.swift */,
+				F283058B284EB6DF007EA6CF /* Producto.swift */,
+				F283058D284ECA43007EA6CF /* ProductsViewController.swift */,
 			);
 			path = ExamenIOS;
 			sourceTree = "<group>";
@@ -157,8 +169,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6296233B284492B300F85ECA /* HomeViewController.swift in Sources */,
+				F283058C284EB6DF007EA6CF /* Producto.swift in Sources */,
 				627FF8C7282DC87C00CB273B /* ViewController.swift in Sources */,
+				F283058A284EB6C6007EA6CF /* Categoria.swift in Sources */,
+				F2830588284EB66C007EA6CF /* Usuario.swift in Sources */,
 				627FF8C3282DC87C00CB273B /* AppDelegate.swift in Sources */,
+				F283058E284ECA43007EA6CF /* ProductsViewController.swift in Sources */,
 				F222F44D28330B870004717F /* SignUpViewController.swift in Sources */,
 				627FF8C5282DC87C00CB273B /* SceneDelegate.swift in Sources */,
 			);
