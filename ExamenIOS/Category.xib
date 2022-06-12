@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIView" customModule="ExamenIOS" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="Xrj-Zp-JgA" id="2Uh-Oj-Co4"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="G61-pD-TQz"/>
+                <outlet property="image" destination="9Vg-0Z-ubq" id="0Hq-3z-Lqv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CategoryView" customModule="ExamenIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="160"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWr-yO-bqW">
+                    <rect key="frame" x="5" y="5" width="353" height="150"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Vg-0Z-ubq">
+                            <rect key="frame" x="18" y="5" width="167" height="125"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrj-Zp-JgA" customClass="CategoryButton" customModule="ExamenIOS" customModuleProvider="target">
+                            <rect key="frame" x="203" y="60" width="135" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="9Vg-0Z-ubq" secondAttribute="bottom" constant="5" id="Vzu-U5-axP"/>
+                        <constraint firstItem="9Vg-0Z-ubq" firstAttribute="top" secondItem="NWr-yO-bqW" secondAttribute="top" constant="5" id="aGr-Df-zmW"/>
+                        <constraint firstAttribute="bottom" secondItem="9Vg-0Z-ubq" secondAttribute="bottom" constant="20" id="guh-UA-gPv"/>
+                        <constraint firstItem="9Vg-0Z-ubq" firstAttribute="top" secondItem="NWr-yO-bqW" secondAttribute="top" constant="20" id="hsY-6w-BoU"/>
+                        <constraint firstItem="9Vg-0Z-ubq" firstAttribute="leading" secondItem="NWr-yO-bqW" secondAttribute="leading" constant="5" id="y9G-ut-lVG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="NWr-yO-bqW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="04Q-vG-zyi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NWr-yO-bqW" secondAttribute="trailing" constant="5" id="K3G-dd-Xxu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="NWr-yO-bqW" secondAttribute="bottom" constant="5" id="L5J-Vt-sIf"/>
+                <constraint firstItem="NWr-yO-bqW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="iDi-Zm-m5i"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="contentView" destination="-1" id="weR-P1-xI2"/>
+            </connections>
+            <point key="canvasLocation" x="89" y="-151"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

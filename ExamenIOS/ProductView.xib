@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProductView" customModule="ExamenIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="143"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Producto 1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XmU-dG-m9P">
+                    <rect key="frame" x="25" y="31" width="221" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$120.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaG-RK-aVx">
+                    <rect key="frame" x="25" y="84" width="145" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5T1-T4-bTe" customClass="ProductButton" customModule="ExamenIOS" customModuleProvider="target">
+                    <rect key="frame" x="250" y="56" width="140" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Ver detalles"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="5T1-T4-bTe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="200" id="6r7-OF-bBH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5T1-T4-bTe" secondAttribute="trailing" id="Hdw-8w-hjn"/>
+                <constraint firstItem="XmU-dG-m9P" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="K6A-SK-KhB"/>
+                <constraint firstItem="VaG-RK-aVx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="MAf-Sk-u9U"/>
+                <constraint firstItem="5T1-T4-bTe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="250" id="Mca-Ll-obG"/>
+                <constraint firstItem="5T1-T4-bTe" firstAttribute="leading" secondItem="VaG-RK-aVx" secondAttribute="trailing" constant="80" id="SkB-VO-czF"/>
+                <constraint firstItem="VaG-RK-aVx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="VFA-co-SDS"/>
+                <constraint firstItem="5T1-T4-bTe" firstAttribute="leading" secondItem="XmU-dG-m9P" secondAttribute="trailing" constant="60" id="cZ8-TQ-sl6"/>
+                <constraint firstItem="VaG-RK-aVx" firstAttribute="top" secondItem="XmU-dG-m9P" secondAttribute="bottom" constant="30" id="f9x-jm-Vch"/>
+                <constraint firstItem="VaG-RK-aVx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="iEp-os-E4B"/>
+                <constraint firstItem="VaG-RK-aVx" firstAttribute="top" secondItem="XmU-dG-m9P" secondAttribute="bottom" constant="40" id="jB6-nZ-cjd"/>
+                <constraint firstItem="XmU-dG-m9P" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="jvK-pv-NaD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="VaG-RK-aVx" secondAttribute="bottom" constant="30" id="rmF-kd-3je"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XmU-dG-m9P" secondAttribute="trailing" constant="100" id="von-bb-bKm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XmU-dG-m9P" secondAttribute="trailing" constant="100" id="xbN-mn-CSQ"/>
+                <constraint firstItem="XmU-dG-m9P" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="ykf-IV-qVu"/>
+                <constraint firstItem="5T1-T4-bTe" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yrq-C1-vaL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="button" destination="5T1-T4-bTe" id="v2y-94-Lm4"/>
+                <outlet property="nombre" destination="XmU-dG-m9P" id="Irk-Xj-S3s"/>
+                <outlet property="precio" destination="VaG-RK-aVx" id="eJu-Gw-R3r"/>
+            </connections>
+            <point key="canvasLocation" x="5.7971014492753632" y="27.790178571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
