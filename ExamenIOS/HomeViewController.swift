@@ -72,6 +72,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.tabla.reloadData()
         }
         
+        
         tabla.dataSource = self
         tabla.delegate = self
         tabla.register(UINib(nibName: "CategoryView", bundle: nil), forCellReuseIdentifier: "CategoryViewCell")

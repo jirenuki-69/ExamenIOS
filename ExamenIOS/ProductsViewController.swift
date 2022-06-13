@@ -34,14 +34,14 @@ class ProductsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func loadProducts(completed: @escaping () -> ()) {
-        let parameters: Parameters = [
-             "q": ["categoria": categoryId]
+        let parameters = [
+             "query": "{ \"categoria\": \"\(categoryId)\" }"
         ]
         
         let request = AF.request("http://3.145.100.233:4000/api/producto", method: .get, parameters: parameters)
         request.responseDecodable(of: Array<Producto>.self) { response in
             guard let data = response.value else { return }
-            print(data)
+            print(response)
             self.productos = data
             self.indicator.stopAnimating()
             self.indicator.hidesWhenStopped = true
@@ -51,10 +51,8 @@ class ProductsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func loadCategory() {
         let request = AF.request("http://3.145.100.233:4000/api/categoria/\(categoryId)")
-        print(request)
         request.responseDecodable(of: Categoria.self) { response in
             guard let data = response.value else { return }
-            print(data)
             self.nombreCategoriaTxt.text = data.nombre
             self.nombreCategoriaTxt.isHidden = false
         }

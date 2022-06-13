@@ -7,6 +7,11 @@
 
 import UIKit
 
+struct Message: Decodable {
+    let user: Usuario
+    let accessToken: String
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var usernameTf: UITextField!
@@ -27,6 +32,26 @@ class ViewController: UIViewController {
         
         DispatchQueue.main.async() {
             self.present(dialogMessage, animated: true, completion: nil)
+        }
+    }
+    
+    func parseJSON(data: Data) -> Message? {
+        
+        var returnValue: Message?
+        do {
+            returnValue = try JSONDecoder().decode(Message.self, from: data)
+        } catch {
+            print("Error took place: \(error.localizedDescription).")
+        }
+        
+        return returnValue
+    }
+    
+    func navigateToHome() {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
+        DispatchQueue.main.async() {
+            self.present(nextViewController, animated: true, completion: nil)
         }
     }
     
@@ -56,14 +81,16 @@ class ViewController: UIViewController {
                 let data = Data(dataString.utf8)
                 
                 do {
+                    if let message = self.parseJSON(data: data) {
+                        let userInstance = UserSingleton.sharedInstance
+                        userInstance.setUser(usuario: message.user)
+                        print("Id usuario: ", UserSingleton.sharedInstance._id)
+                    }
+                    
                     if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-
+                        
                         if (json["accessToken"] != nil) {
-                            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
-                            DispatchQueue.main.async() {
-                                self.present(nextViewController, animated: true, completion: nil)
-                            }
+                            self.navigateToHome()
                         } else {
                             self.alert(title: "Error", message: json["message"] as! String)
                         }

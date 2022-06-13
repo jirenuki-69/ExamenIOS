@@ -35,6 +35,17 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    func crearCarrito(idUsuario: String) {
+        let parameters: [String: Any] = [
+            "user": idUsuario
+        ]
+        
+        let request = AF.request("http://3.145.100.233:4000/api/carrito", method: .post, parameters: parameters, headers: HTTPHeaders.default)
+        request.responseDecodable(of: [String: [String]].self) { response in
+            print(response)
+        }
+    }
+    
     func register(username: String, password: String) {
         
         let url = URL(string: "http://3.145.100.233:4000/api/usuario")
@@ -66,6 +77,7 @@ class SignUpViewController: UIViewController {
                     if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                         // try to read out a string array
                         if (json["message"] == nil) {
+                            self.crearCarrito(idUsuario: (json["insertedIds"] as! [String])[0])
                             self.alert(title: "Usuario Creado", message: "El usuario ha sido registrado con éxito.")                        } else {
                                 self.alert(title: "Error", message: json["message"] as! String)
                             }

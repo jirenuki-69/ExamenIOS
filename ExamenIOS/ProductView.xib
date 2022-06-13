@@ -59,7 +59,7 @@
                 <outlet property="nombre" destination="XmU-dG-m9P" id="Irk-Xj-S3s"/>
                 <outlet property="precio" destination="VaG-RK-aVx" id="eJu-Gw-R3r"/>
             </connections>
-            <point key="canvasLocation" x="5.7971014492753632" y="27.790178571428569"/>
+            <point key="canvasLocation" x="6" y="24"/>
         </view>
     </objects>
     <resources>
